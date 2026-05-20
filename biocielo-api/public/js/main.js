@@ -165,26 +165,25 @@ function cerrarModal(event) {
 async function cargarTrivia() {
 
   const pregunta = document.getElementById("pregunta");
-
   const opciones = document.getElementById("opciones");
-
   const resultado = document.getElementById("resultado");
-
   const siguienteBtn = document.getElementById("siguienteBtn");
 
   pregunta.textContent = "🌿 Generando pregunta...";
-
   opciones.innerHTML = "";
-
   resultado.textContent = "";
 
-  siguienteBtn.style.display = "none";
+  if (siguienteBtn) {
+    siguienteBtn.style.display = "none";
+  }
 
   try {
 
-    const respuesta = await fetch(
-      "https://biocielo.onrender.com/api/trivia"
-    );
+    const respuesta = await fetch("https://biocielo.onrender.com/api/trivia");
+
+    if (!respuesta.ok) {
+      throw new Error("Error del servidor");
+    }
 
     const trivia = await respuesta.json();
 
@@ -193,45 +192,40 @@ async function cargarTrivia() {
     trivia.opciones.forEach(opcion => {
 
       const boton = document.createElement("button");
-
       boton.textContent = opcion;
-
       boton.classList.add("opcionTrivia");
 
       boton.onclick = () => {
 
-        const botones =
-        document.querySelectorAll(".opcionTrivia");
+        const botones = document.querySelectorAll(".opcionTrivia");
 
-        botones.forEach(b => b.disabled = true);
+        botones.forEach(b => {
+          b.disabled = true;
+        });
 
-        if(opcion === trivia.correcta){
+        if (opcion === trivia.correcta) {
 
           boton.classList.add("correcta");
-
-          resultado.textContent =
-          "✅ ¡Correcto!";
+          resultado.textContent = "✅ ¡Correcto!";
 
         } else {
 
           boton.classList.add("incorrecta");
 
           botones.forEach(b => {
-
-            if(b.textContent === trivia.correcta){
-
+            if (b.textContent === trivia.correcta) {
               b.classList.add("correcta");
-
             }
-
           });
 
           resultado.textContent =
-          "❌ Incorrecto";
+          "❌ Incorrecto. Respuesta correcta: " + trivia.correcta;
 
         }
 
-        siguienteBtn.style.display = "block";
+        if (siguienteBtn) {
+          siguienteBtn.style.display = "block";
+        }
 
       };
 
@@ -239,13 +233,14 @@ async function cargarTrivia() {
 
     });
 
-  } catch(error){
+  } catch (error) {
 
-    console.log(error);
-
-    pregunta.textContent =
-    "❌ Error cargando trivia.";
+    console.error(error);
+    pregunta.textContent = "❌ Error al cargar trivia.";
 
   }
 
-}
+
+
+  }
+
