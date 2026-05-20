@@ -178,7 +178,7 @@
 
         <!-- JAGUAR -->
 
-        <article class="card">
+        <article class="card" onclick="mostrarPostit('jaguar')">
 
           <img src="img/jaguar.jpg" alt="Jaguar">
 
@@ -202,7 +202,7 @@
 
         <!-- ZORRO -->
 
-        <article class="card">
+        <article class="card" onclick="mostrarPostit('zorro')">
 
           <img src="img/zorro.jpg" alt="Zorro gris">
 
@@ -229,7 +229,7 @@
 
         <!-- TEPEZCUINTLE -->
 
-        <article class="card">
+        <article class="card" onclick="mostrarPostit('tepezcuintle')">
 
           <img src="img/tepezcuintle.jpg" alt="Tepezcuintle">
 
@@ -256,7 +256,7 @@
 
         <!-- CARACARA -->
 
-        <article class="card">
+        <article class="card" onclick="mostrarPostit('caracara')">
 
           <img src="img/caracara.jpg" alt="Caracara crestado">
 
@@ -283,7 +283,7 @@
 
         <!-- VENADO -->
 
-        <article class="card">
+        <article class="card" onclick="mostrarPostit('venado')">
 
           <img src="img/venado.jpg" alt="Venado cola blanca">
 
@@ -310,7 +310,7 @@
 
         <!-- COATÍ -->
 
-        <article class="card">
+        <article class="card" onclick="mostrarPostit('coati')">
 
           <img src="img/coati.jpg" alt="Coatí">
 
@@ -509,7 +509,7 @@
 
   <div id="modalInfo" class="modal-info" onclick="cerrarModal(event)">
 
-    <div class="modal-card">
+    <div class="modal-card" onclick="event.stopPropagation()">
 
       <button class="cerrar-modal" onclick="cerrarModal(event)">
         ×
@@ -650,7 +650,7 @@
 
 </footer>
 
-<script src="/js/main.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 </html>

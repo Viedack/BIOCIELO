@@ -134,6 +134,204 @@ function mostrarPostit(tipo) {
 
   }
 
+
+  // ===============================
+  // JAGUAR
+  // ===============================
+
+  if (tipo === "jaguar") {
+
+    titulo.textContent = "🐆 Jaguar";
+
+    texto.innerHTML = `
+    <strong>Nombre Científico:</strong><br>
+    Panthera onca<br><br>
+
+    <strong>Categoría de Riesgo:</strong><br>
+    En Peligro de Extinción (NOM-059-SEMARNAT-2010)<br><br>
+
+    <strong>Estatus Internacional:</strong><br>
+    Casi amenazado (IUCN) / Apéndice I (CITES)<br><br>
+
+    <strong>Rol en el Ecosistema:</strong><br>
+    Especie paraguas: protege todo el ecosistema de El Cielo.<br><br>
+
+    <strong>Función Trófica:</strong><br>
+    Carnívoro / Superpredador.<br><br>
+
+    <strong>Parámetros de Identificación:</strong><br>
+    Peso: 45 kg a 85 kg.<br>
+    Longitud: 1.50 m a 2.10 m.<br>
+    Rosetas negras únicas en cada individuo.<br><br>
+
+    <strong>👣 Huella y Rastro:</strong><br>
+    Largo: 9 cm a 13 cm.<br>
+    Sin marcas de uñas.
+    `;
+
+  }
+
+
+  // ===============================
+  // ZORRO GRIS
+  // ===============================
+
+  if (tipo === "zorro") {
+
+    titulo.textContent = "🦊 Zorro Gris";
+
+    texto.innerHTML = `
+    <strong>Nombre Científico:</strong><br>
+    Urocyon cinereoargenteus<br><br>
+
+    <strong>Estatus:</strong><br>
+    Preocupación menor (IUCN)<br><br>
+
+    <strong>Rol en el Ecosistema:</strong><br>
+    Controla roedores e insectos.<br><br>
+
+    <strong>Función Trófica:</strong><br>
+    Omnívoro.<br><br>
+
+    <strong>Identificación:</strong><br>
+    Peso: 3 a 7 kg.<br>
+    Cola larga con punta negra.<br>
+    Pelaje gris con tonos rojizos.<br><br>
+
+    <strong>👣 Huellas:</strong><br>
+    4 dedos con uñas visibles.
+    `;
+
+  }
+
+
+  // ===============================
+  // TEPEZCUINTLE
+  // ===============================
+
+  if (tipo === "tepezcuintle") {
+
+    titulo.textContent = "🐾 Tepezcuintle";
+
+    texto.innerHTML = `
+    <strong>Nombre Científico:</strong><br>
+    Cuniculus paca<br><br>
+
+    <strong>Estatus:</strong><br>
+    Preocupación menor (IUCN)<br><br>
+
+    <strong>Rol en el Ecosistema:</strong><br>
+    Dispersor de semillas.<br><br>
+
+    <strong>Función Trófica:</strong><br>
+    Herbívoro / Frugívoro.<br><br>
+
+    <strong>Identificación:</strong><br>
+    Pelaje café con manchas blancas laterales.<br>
+    Peso: 6 kg a 12 kg.<br><br>
+
+    <strong>👣 Huellas:</strong><br>
+    Huellas pequeñas y redondeadas.
+    `;
+
+  }
+
+
+  // ===============================
+  // CARACARA
+  // ===============================
+
+  if (tipo === "caracara") {
+
+    titulo.textContent = "🦅 Caracara Crestado";
+
+    texto.innerHTML = `
+    <strong>Nombre Científico:</strong><br>
+    Caracara plancus<br><br>
+
+    <strong>Estatus:</strong><br>
+    Preocupación menor (IUCN)<br><br>
+
+    <strong>Rol en el Ecosistema:</strong><br>
+    Ave carroñera y controladora de fauna pequeña.<br><br>
+
+    <strong>Función Trófica:</strong><br>
+    Carnívoro oportunista.<br><br>
+
+    <strong>Identificación:</strong><br>
+    Cara naranja y cresta negra.<br>
+    Envergadura de hasta 1.2 metros.<br><br>
+
+    <strong>👣 Rastros:</strong><br>
+    Marcas de garras largas en suelo blando.
+    `;
+
+  }
+
+
+  // ===============================
+  // VENADO
+  // ===============================
+
+  if (tipo === "venado") {
+
+    titulo.textContent = "🦌 Venado Cola Blanca";
+
+    texto.innerHTML = `
+    <strong>Nombre Científico:</strong><br>
+    Odocoileus virginianus<br><br>
+
+    <strong>Estatus:</strong><br>
+    Preocupación menor (IUCN)<br><br>
+
+    <strong>Rol en el Ecosistema:</strong><br>
+    Dispersor de semillas y presa clave.<br><br>
+
+    <strong>Función Trófica:</strong><br>
+    Herbívoro.<br><br>
+
+    <strong>Identificación:</strong><br>
+    Cola blanca visible al correr.<br>
+    Peso: 35 kg a 70 kg.<br><br>
+
+    <strong>👣 Huellas:</strong><br>
+    Huella partida en forma de corazón.
+    `;
+
+  }
+
+
+  // ===============================
+  // COATI
+  // ===============================
+
+  if (tipo === "coati") {
+
+    titulo.textContent = "🐾 Coatí";
+
+    texto.innerHTML = `
+    <strong>Nombre Científico:</strong><br>
+    Nasua narica<br><br>
+
+    <strong>Estatus:</strong><br>
+    Preocupación menor (IUCN)<br><br>
+
+    <strong>Rol en el Ecosistema:</strong><br>
+    Dispersor de semillas y controlador de insectos.<br><br>
+
+    <strong>Función Trófica:</strong><br>
+    Omnívoro.<br><br>
+
+    <strong>Identificación:</strong><br>
+    Cola anillada y hocico largo.<br>
+    Peso: 3 kg a 6 kg.<br><br>
+
+    <strong>👣 Huellas:</strong><br>
+    Cinco dedos visibles con uñas marcadas.
+    `;
+
+  }
+
   modal.style.display = "flex";
 
 }
@@ -240,7 +438,4 @@ async function cargarTrivia() {
 
   }
 
-
-
-  }
-
+}
