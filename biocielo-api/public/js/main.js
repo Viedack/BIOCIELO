@@ -170,27 +170,27 @@ async function cargarTrivia() {
 
   const resultado = document.getElementById("resultado");
 
-  pregunta.textContent = "Generando pregunta...";
+  const siguienteBtn = document.getElementById("siguienteBtn");
+
+  pregunta.textContent = "🌿 Generando pregunta...";
 
   opciones.innerHTML = "";
 
   resultado.textContent = "";
 
+  siguienteBtn.style.display = "none";
+
   try {
 
-    const respuesta = await fetch("/api/trivia");
+    const respuesta = await fetch(
+      "https://biocielo.onrender.com/api/trivia"
+    );
 
-    if (!respuesta.ok) {
+    const trivia = await respuesta.json();
 
-      throw new Error("Error del servidor");
+    pregunta.textContent = trivia.pregunta;
 
-    }
-
-    const data = await respuesta.json();
-
-    pregunta.textContent = data.pregunta;
-
-    data.opciones.forEach(opcion => {
+    trivia.opciones.forEach(opcion => {
 
       const boton = document.createElement("button");
 
@@ -198,41 +198,53 @@ async function cargarTrivia() {
 
       boton.classList.add("opcionTrivia");
 
-      boton.onclick = () => verificarRespuesta(opcion, data.correcta);
+      boton.onclick = () => {
+
+        const botones =
+        document.querySelectorAll(".opcionTrivia");
+
+        botones.forEach(b => b.disabled = true);
+
+        if(opcion === trivia.correcta){
+
+          boton.classList.add("correcta");
+
+          resultado.textContent =
+          "✅ ¡Correcto!";
+
+        } else {
+
+          boton.classList.add("incorrecta");
+
+          botones.forEach(b => {
+
+            if(b.textContent === trivia.correcta){
+
+              b.classList.add("correcta");
+
+            }
+
+          });
+
+          resultado.textContent =
+          "❌ Incorrecto";
+
+        }
+
+        siguienteBtn.style.display = "block";
+
+      };
 
       opciones.appendChild(boton);
 
     });
 
-  } catch (error) {
+  } catch(error){
 
-    console.error(error);
+    console.log(error);
 
     pregunta.textContent =
-    "❌ Error al cargar trivia. Revisa la terminal.";
-
-  }
-
-}
-
-
-// ===============================
-// VERIFICAR RESPUESTA
-// ===============================
-
-function verificarRespuesta(opcion, correcta) {
-
-  const resultado = document.getElementById("resultado");
-
-  if (opcion === correcta) {
-
-    resultado.textContent =
-    "✅ ¡Muy bien hecho!";
-
-  } else {
-
-    resultado.textContent =
-    "❌ Incorrecto. Respuesta correcta: " + correcta;
+    "❌ Error cargando trivia.";
 
   }
 
