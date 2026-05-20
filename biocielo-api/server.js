@@ -3,41 +3,34 @@ import OpenAI from "openai";
 import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
+import fs from "fs";
+import cors from "cors";
 
 dotenv.config();
 
 const app = express();
 
+app.use(cors());
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Carpeta pública
 app.use(express.static(path.join(__dirname, "public")));
 
-// Prueba directa del PDF
 app.get("/test-pdf", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "pdf", "pintar.pdf"));
 });
-import fs from "fs";
 
 app.get("/debug-files", (req, res) => {
-
   res.json({
-
     cwd: process.cwd(),
-
     files: fs.readdirSync("./"),
-
     publicExists: fs.existsSync("./public"),
-
     pdfExists: fs.existsSync("./public/pdf"),
-
     pdfFiles: fs.existsSync("./public/pdf")
       ? fs.readdirSync("./public/pdf")
       : "NO EXISTE"
-
   });
-
 });
 
 const openai = new OpenAI({
@@ -52,7 +45,7 @@ app.get("/api/trivia", async (req, res) => {
         {
           role: "system",
           content:
-            "Genera una pregunta tipo trivia sobre biodiversidad, foto trampeo o ciencia ciudadana. Responde SOLO en JSON."
+            "Genera una pregunta tipo trivia sobre biodiversidad, foto trampeo o ciencia ciudadana. Responde SOLO en JSON válido, sin markdown."
         },
         {
           role: "user",
@@ -82,6 +75,8 @@ app.get("/api/trivia", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log("Servidor corriendo en puerto 3000");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en puerto ${PORT}`);
 });
