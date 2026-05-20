@@ -327,10 +327,15 @@ body::before {
   margin-bottom: 12px;
 }
 
-.card p {
-  text-align: left;
-  font-size: 15px;
-  margin-bottom: 8px;
+.section p {
+  text-align: justify;
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(255,255,255,.86);
+}
+
+.justificado {
+  text-align: justify !important;
 }
 
 .tech {
@@ -543,4 +548,186 @@ footer {
   .navbar ul {
     grid-template-columns: 1fr;
   }
+}
+
+/* ===== MODAL INFO BIOCIELO ===== */
+
+/* ===== MODAL INFO ===== */
+
+.modal-info{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.75);
+  z-index:9999;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+.modal-card{
+  width:min(92%,520px);
+  max-height:80vh;
+  overflow-y:auto;
+
+  background:#123524;
+  border-radius:20px;
+
+  padding:32px 28px;
+
+  position:relative;
+
+  box-shadow:0 15px 40px rgba(0,0,0,0.4);
+
+  border:1px solid rgba(181,214,140,0.25);
+
+  scrollbar-width:thin;
+}
+
+.modal-card h3{
+  color:#b8d68c;
+  margin:0 40px 18px 0;
+  font-size:1.5rem;
+}
+
+.modal-card p{
+  color:#f3f5ef;
+  line-height:1.8;
+  font-size:1rem;
+  text-align:left;
+  margin:0;
+}
+
+.modal-card strong{
+  color:#ffffff;
+}
+
+.modal-card a{
+  color:#b8d68c;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+.modal-card a:hover{
+  text-decoration:underline;
+}
+
+.cerrar-modal{
+  position:sticky;
+  top:0;
+
+  float:right;
+
+  width:36px;
+  height:36px;
+
+  border:none;
+  border-radius:50%;
+
+  background:#b8d68c;
+
+  color:#123524;
+
+  font-size:24px;
+  font-weight:bold;
+
+  cursor:pointer;
+
+  z-index:20;
+}
+
+@media(max-width:600px){
+
+  .modal-info{
+    align-items:flex-start;
+    padding:65px 14px 20px;
+  }
+
+  .modal-card{
+    width:100%;
+    max-width:360px;
+
+    max-height:78vh;
+
+    padding:24px 20px;
+
+    border-radius:18px;
+  }
+
+  .modal-card h3{
+    font-size:1.25rem;
+  }
+
+  .modal-card p{
+    font-size:.95rem;
+    line-height:1.7;
+  }
+
+}
+
+
+/* =========================
+   TRIVIA
+========================= */
+
+#trivia{
+
+  text-align: center;
+  padding: 40px;
+
+}
+
+#triviaBox{
+
+  background: rgba(255,255,255,0.1);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 700px;
+  margin: auto;
+  backdrop-filter: blur(10px);
+
+}
+
+#pregunta{
+
+  margin-top: 20px;
+  font-size: 1.3rem;
+
+}
+
+#opciones{
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
+
+}
+
+.opcionTrivia{
+
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #2e8b57;
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s;
+
+}
+
+.opcionTrivia:hover{
+
+  transform: scale(1.03);
+  background: #246b45;
+
+}
+
+#resultado{
+
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+
 }

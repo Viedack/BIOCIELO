@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BIOCIELO | Ciencia Ciudadana en El Cielo</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <!-- HERO -->
+
+  <header class="hero" id="inicio">
+
+    <nav class="navbar">
+
+      <div class="brand">
+
+        <img src="img/logo.png" alt="Logo BIOCIELO">
+
+        <span>BIOCIELO</span>
+
+      </div>
+
+    </nav>
+
+
+    <section class="hero-content">
+
+      <div class="hero-text">
+
+        <span class="tag">Monitoreo de biodiversidad</span>
+
+        <h1>BIOCIELO</h1>
+
+        <h2>Ciencia ciudadana en el corazón del bosque</h2>
+
+        <p style="text-align: justify;">
+
+          Una plataforma educativa nacida en Gómez Farías, Tamaulipas que conecta
+          la tecnología con el amor por la naturaleza. A través del uso estratégico
+          de cámaras trampa, transformamos a los jóvenes en investigadores ambientales
+          y acercamos a la niñez a la riqueza de la Reserva de la Biósfera El Cielo.
+
+          Unimos la ciencia real, las herramientas digitales y la educación ambiental
+          para que las nuevas generaciones conozcan, valoren y protejan el hogar del
+          jaguar y cientos de especies más.
+
+          ¡El futuro de la conservación empieza aquí!
+
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#avistamientos" class="btn primary">
+
+            Explorar especies
+
+          </a>
+
+          <a href="#tecnologia" class="btn secondary">
+
+            Ver tecnología
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-panel">
+
+        <img src="img/logo.png" alt="Logo BIOCIELO">
+
+        <h3>Reserva de la Biosfera El Cielo, Tamaulipas</h3>
+
+      </div>
+
+    </section>
+
+  </header>
+
+
+  <!-- MAIN -->
+
+  <main>
+
+    <!-- RESERVA -->
+
+    <section id="reserva" class="section">
+
+      <h2>Reserva de la Biosfera El Cielo</h2>
+
+      <p style="text-align: justify;">
+
+        La Reserva de la Biósfera El Cielo es un tesoro escondido lleno de magia
+        y vida salvaje. ¿Te imaginas ver lo que hacen los animales cuando nadie
+        los observa?
+
+        A través de los ojos de nuestras cámaras trampa, te invitamos a descubrir
+        fotos y videos reales de los jaguares, venado y criaturas asombrosas que
+        habitan este bosque.
+
+        ¡Conviértete en un Guardián de El Cielo, explora la selva digital y ayúdanos
+        a proteger su hogar!
+
+      </p>
+
+
+      <div class="stats">
+
+        <!-- BIODIVERSIDAD -->
+
+        <div onclick="mostrarPostit('biodiversidad')">
+
+          <h3>🌿 Biodiversidad</h3>
+
+          <p>
+            Registro de especies que habitan en bosques,
+            montañas y senderos.
+          </p>
+
+        </div>
+
+
+        <!-- FOTO TRAMPEO -->
+
+        <div onclick="mostrarPostit('foto')">
+
+          <h3>📸 Foto trampeo</h3>
+
+          <p>
+            Captura de animales silvestres sin alterar
+            su comportamiento natural.
+          </p>
+
+        </div>
+
+
+        <!-- CIENCIA -->
+
+        <div onclick="mostrarPostit('ciencia')">
+
+          <h3>🛰️ Ciencia ciudadana</h3>
+
+          <p>
+            Uso de tecnología para aprender,
+            compartir y proteger la naturaleza.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- AVISTAMIENTOS -->
+
+    <section id="avistamientos" class="section">
+
+      <h2>Especies registradas</h2>
+
+      <p>
+        Estas son algunas especies observadas mediante monitoreo en la Reserva.
+      </p>
+
+
+      <div class="cards">
+
+        <!-- JAGUAR -->
+
+        <article class="card">
+
+          <img src="img/jaguar.jpg" alt="Jaguar">
+
+          <div>
+
+            <span class="status">Detectado</span>
+
+            <h3>Jaguar</h3>
+
+            <p><b>Alimentación:</b> Carnívoro.</p>
+
+            <p>
+              <b>Importancia:</b>
+              Depredador clave para el equilibrio del ecosistema.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- ZORRO -->
+
+        <article class="card">
+
+          <img src="img/zorro.jpg" alt="Zorro gris">
+
+          <div>
+
+            <span class="status">Detectado</span>
+
+            <h3>Zorro gris</h3>
+
+            <p>
+              <b>Alimentación:</b>
+              Frutos, insectos, aves pequeñas y roedores.
+            </p>
+
+            <p>
+              <b>Importancia:</b>
+              Ayuda al control de poblaciones pequeñas.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- TEPEZCUINTLE -->
+
+        <article class="card">
+
+          <img src="img/tepezcuintle.jpg" alt="Tepezcuintle">
+
+          <div>
+
+            <span class="status">Detectado</span>
+
+            <h3>Tepezcuintle</h3>
+
+            <p>
+              <b>Alimentación:</b>
+              Frutos, semillas y raíces.
+            </p>
+
+            <p>
+              <b>Importancia:</b>
+              Dispersa semillas y ayuda al bosque.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- CARACARA -->
+
+        <article class="card">
+
+          <img src="img/caracara.jpg" alt="Caracara crestado">
+
+          <div>
+
+            <span class="status">Detectado</span>
+
+            <h3>Caracara crestado</h3>
+
+            <p>
+              <b>Alimentación:</b>
+              Insectos, reptiles, carroña y pequeños animales.
+            </p>
+
+            <p>
+              <b>Importancia:</b>
+              Limpia el ecosistema y controla plagas.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- VENADO -->
+
+        <article class="card">
+
+          <img src="img/venado.jpg" alt="Venado cola blanca">
+
+          <div>
+
+            <span class="status">Detectado</span>
+
+            <h3>Venado cola blanca</h3>
+
+            <p>
+              <b>Alimentación:</b>
+              Hojas, frutos, ramas y pastos.
+            </p>
+
+            <p>
+              <b>Importancia:</b>
+              Forma parte de la cadena alimenticia.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- COATÍ -->
+
+        <article class="card">
+
+          <img src="img/coati.jpg" alt="Coatí">
+
+          <div>
+
+            <span class="status">Detectado</span>
+
+            <h3>Coatí</h3>
+
+            <p>
+              <b>Alimentación:</b>
+              Frutas, insectos, huevos y pequeños animales.
+            </p>
+
+            <p>
+              <b>Importancia:</b>
+              Dispersa semillas y remueve el suelo.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+<!-- TRIVIA -->
+
+<section id="trivia" class="section">
+
+  <h2>Trivia BIOCIELO</h2>
+
+  <p>
+    Pon a prueba tus conocimientos de Científico Ciudadano y descubre si estas afirmaciones son reales o puros mitos de la selva.
+
+  </p>
+
+  <div id="triviaBox">
+
+    <button onclick="cargarTrivia()">
+      Generar pregunta
+    </button>
+
+    <h3 id="pregunta"></h3>
+
+    <div id="opciones"></div>
+
+    <p id="resultado"></p>
+
+  </div>
+
+</section>
+
+    <!-- TECNOLOGÍA -->
+
+    <section id="tecnologia" class="section tech">
+
+      <h2>Monitoreo inteligente</h2>
+
+      <div class="tech-grid">
+
+        <div>
+
+          <h3>📷 Cámaras trampa</h3>
+
+          <p>
+            Registran animales de día y de noche sin molestarlos.
+          </p>
+
+        </div>
+
+        <div>
+
+          <h3>🌐 Plataforma web</h3>
+
+          <p>
+            Organiza fotografías, fichas técnicas y datos de avistamientos.
+          </p>
+
+        </div>
+
+        <div>
+
+          <h3>🔬 Educación científica</h3>
+
+          <p>
+            Convierte los registros en aprendizaje para niñas, niños y jóvenes.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PARTICIPA -->
+
+    <section id="participa" class="section contact">
+
+      <h2>Participa en BIOCIELO</h2>
+
+      <p>
+        Conocer la biodiversidad es el primer paso para protegerla.
+      </p>
+
+      <button onclick="mostrarMensaje()">
+
+        Quiero cuidar la naturaleza
+
+      </button>
+
+      <p id="mensaje"></p>
+
+    </section>
+
+  </main>
+
+
+  <!-- MODAL -->
+
+  <div id="modalInfo" class="modal-info" onclick="cerrarModal(event)">
+
+    <div class="modal-card">
+
+      <button class="cerrar-modal" onclick="cerrarModal(event)">
+        ×
+      </button>
+
+      <h3 id="modalTitulo"></h3>
+
+      <p id="modalTexto"></p>
+
+    </div>
+
+  </div>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 BIOCIELO | Ciencia ciudadana y biodiversidad
+    </p>
+
+  </footer>
+
+
+</body>
+
+</html>
