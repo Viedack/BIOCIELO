@@ -18,6 +18,27 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/test-pdf", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "pdf", "pintar.pdf"));
 });
+import fs from "fs";
+
+app.get("/debug-files", (req, res) => {
+
+  res.json({
+
+    cwd: process.cwd(),
+
+    files: fs.readdirSync("./"),
+
+    publicExists: fs.existsSync("./public"),
+
+    pdfExists: fs.existsSync("./public/pdf"),
+
+    pdfFiles: fs.existsSync("./public/pdf")
+      ? fs.readdirSync("./public/pdf")
+      : "NO EXISTE"
+
+  });
+
+});
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
