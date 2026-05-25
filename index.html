@@ -163,180 +163,235 @@
     </section>
 
 
-    <!-- AVISTAMIENTOS -->
+<section class="especies">
 
-    <section id="avistamientos" class="section">
+  <h2>Especies registradas</h2>
 
-      <h2>Especies registradas</h2>
+  <p>
+    Estas son algunas especies observadas mediante monitoreo en la Reserva.
+  </p>
 
-      <p>
-        Estas son algunas especies observadas mediante monitoreo en la Reserva.
-      </p>
+  <div class="cards">
 
 
-      <div class="cards">
+    <!-- JAGUAR -->
 
-        <!-- JAGUAR -->
+    <article class="card" onclick="mostrarPostit('jaguar')">
 
-        <article class="card" onclick="mostrarPostit('jaguar')">
+      <img src="img/jaguar.jpg" alt="Jaguar">
 
-          <img src="img/jaguar.jpg" alt="Jaguar">
+      <div>
 
-          <div>
+        <span class="status">Detectado</span>
 
-            <span class="status">Detectado</span>
+        <h3>Jaguar</h3>
 
-            <h3>Jaguar</h3>
+        <p>
+          <b>Alimentación:</b>
+          Carnívoro.
+        </p>
 
-            <p><b>Alimentación:</b> Carnívoro.</p>
-
-            <p>
-              <b>Importancia:</b>
-              Depredador clave para el equilibrio del ecosistema.
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <!-- ZORRO -->
-
-        <article class="card" onclick="mostrarPostit('zorro')">
-
-          <img src="img/zorro.jpg" alt="Zorro gris">
-
-          <div>
-
-            <span class="status">Detectado</span>
-
-            <h3>Zorro gris</h3>
-
-            <p>
-              <b>Alimentación:</b>
-              Frutos, insectos, aves pequeñas y roedores.
-            </p>
-
-            <p>
-              <b>Importancia:</b>
-              Ayuda al control de poblaciones pequeñas.
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <!-- TEPEZCUINTLE -->
-
-        <article class="card" onclick="mostrarPostit('tepezcuintle')">
-
-          <img src="img/tepezcuintle.jpg" alt="Tepezcuintle">
-
-          <div>
-
-            <span class="status">Detectado</span>
-
-            <h3>Tepezcuintle</h3>
-
-            <p>
-              <b>Alimentación:</b>
-              Frutos, semillas y raíces.
-            </p>
-
-            <p>
-              <b>Importancia:</b>
-              Dispersa semillas y ayuda al bosque.
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <!-- CARACARA -->
-
-        <article class="card" onclick="mostrarPostit('caracara')">
-
-          <img src="img/caracara.jpg" alt="Caracara crestado">
-
-          <div>
-
-            <span class="status">Detectado</span>
-
-            <h3>Caracara crestado</h3>
-
-            <p>
-              <b>Alimentación:</b>
-              Insectos, reptiles, carroña y pequeños animales.
-            </p>
-
-            <p>
-              <b>Importancia:</b>
-              Limpia el ecosistema y controla plagas.
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <!-- VENADO -->
-
-        <article class="card" onclick="mostrarPostit('venado')">
-
-          <img src="img/venado.jpg" alt="Venado cola blanca">
-
-          <div>
-
-            <span class="status">Detectado</span>
-
-            <h3>Venado cola blanca</h3>
-
-            <p>
-              <b>Alimentación:</b>
-              Hojas, frutos, ramas y pastos.
-            </p>
-
-            <p>
-              <b>Importancia:</b>
-              Forma parte de la cadena alimenticia.
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <!-- COATÍ -->
-
-        <article class="card" onclick="mostrarPostit('coati')">
-
-          <img src="img/coati.jpg" alt="Coatí">
-
-          <div>
-
-            <span class="status">Detectado</span>
-
-            <h3>Coatí</h3>
-
-            <p>
-              <b>Alimentación:</b>
-              Frutas, insectos, huevos y pequeños animales.
-            </p>
-
-            <p>
-              <b>Importancia:</b>
-              Dispersa semillas y remueve el suelo.
-            </p>
-
-          </div>
-
-        </article>
+        <p>
+          <b>Importancia:</b>
+          Depredador clave para el equilibrio del ecosistema.
+        </p>
 
       </div>
 
-    </section>
+    </article>
+
+
+    <!-- ZORRO GRIS -->
+
+    <article class="card" onclick="mostrarPostit('zorro')">
+
+      <img src="img/zorro.jpg" alt="Zorro gris">
+
+      <div>
+
+        <span class="status">Detectado</span>
+
+        <h3>Zorro gris</h3>
+
+        <p>
+          <b>Alimentación:</b>
+          Frutos, insectos, aves pequeñas y roedores.
+        </p>
+
+        <p>
+          <b>Importancia:</b>
+          Ayuda al control de poblaciones pequeñas.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- TEPEZCUINTLE -->
+
+    <article class="card" onclick="mostrarPostit('tepezcuintle')">
+
+      <img src="img/tepezcuintle.jpg" alt="Tepezcuintle">
+
+      <div>
+
+        <span class="status">Detectado</span>
+
+        <h3>Tepezcuintle</h3>
+
+        <p>
+          <b>Alimentación:</b>
+          Frutos, semillas y raíces.
+        </p>
+
+        <p>
+          <b>Importancia:</b>
+          Dispersa semillas y ayuda al bosque.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- CARACARA CRESTADO -->
+
+    <article class="card" onclick="mostrarPostit('caracara')">
+
+      <img src="img/caracara.jpg" alt="Caracara crestado">
+
+      <div>
+
+        <span class="status">Detectado</span>
+
+        <h3>Caracara crestado</h3>
+
+        <p>
+          <b>Alimentación:</b>
+          Insectos, reptiles, carroña y pequeños animales.
+        </p>
+
+        <p>
+          <b>Importancia:</b>
+          Limpia el ecosistema y controla plagas.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- VENADO -->
+
+    <article class="card" onclick="mostrarPostit('venado')">
+
+      <img src="img/venado.jpg" alt="Venado cola blanca">
+
+      <div>
+
+        <span class="status">Detectado</span>
+
+        <h3>Venado cola blanca</h3>
+
+        <p>
+          <b>Alimentación:</b>
+          Hojas, frutos, ramas y pastos.
+        </p>
+
+        <p>
+          <b>Importancia:</b>
+          Forma parte de la cadena alimenticia.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- COATÍ -->
+
+    <article class="card" onclick="mostrarPostit('coati')">
+
+      <img src="img/coati.jpg" alt="Coatí">
+
+      <div>
+
+        <span class="status">Detectado</span>
+
+        <h3>Coatí</h3>
+
+        <p>
+          <b>Alimentación:</b>
+          Frutas, insectos, huevos y pequeños animales.
+        </p>
+
+        <p>
+          <b>Importancia:</b>
+          Dispersa semillas y remueve el suelo.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- HOCOFAISÁN -->
+
+    <article class="card" onclick="mostrarPostit('hocofaisan')">
+
+      <img src="img/hocofaisan.jpeg" alt="Hocofaisán">
+
+      <div>
+
+        <span class="status">Detectado</span>
+
+        <h3>Hocofaisán</h3>
+
+        <p>
+          <b>Alimentación:</b>
+          Frutos, semillas, insectos y pequeños invertebrados.
+        </p>
+
+        <p>
+          <b>Importancia:</b>
+          Ayuda a dispersar semillas en la selva.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- MARIPOSA MONARCA -->
+
+    <article class="card" onclick="mostrarPostit('monarca')">
+
+      <img src="img/monarca.jpeg" alt="Mariposa Monarca">
+
+      <div>
+
+        <span class="status">Detectado</span>
+
+        <h3>Mariposa Monarca</h3>
+
+        <p>
+          <b>Alimentación:</b>
+          Néctar de flores.
+        </p>
+
+        <p>
+          <b>Importancia:</b>
+          Polinizadora y símbolo de migración.
+        </p>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
 
 <!-- TRIVIA -->
 

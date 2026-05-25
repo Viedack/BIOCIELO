@@ -334,6 +334,61 @@ function mostrarPostit(tipo) {
 
   modal.style.display = "flex";
 
+
+  // ===============================
+// HOCOFAISÁN
+// ===============================
+
+if (tipo === "hocofaisan") {
+
+  titulo.textContent = "🦃 Hocofaisán";
+
+  texto.innerHTML = `
+  <strong>Nombre Científico:</strong><br>
+  Crax rubra<br><br>
+
+  <strong>Estatus:</strong><br>
+  Vulnerable en algunas regiones.<br><br>
+
+  <strong>Rol en el Ecosistema:</strong><br>
+  Dispersor de semillas y regenerador del bosque.<br><br>
+
+  <strong>Función Trófica:</strong><br>
+  Omnívoro.<br><br>
+
+  <strong>Identificación:</strong><br>
+  Ave grande de plumaje oscuro, copete rizado y protuberancia en el pico.
+  `;
+
+}
+
+
+// ===============================
+// MARIPOSA MONARCA
+// ===============================
+
+if (tipo === "monarca") {
+
+  titulo.textContent = "🦋 Mariposa Monarca";
+
+  texto.innerHTML = `
+  <strong>Nombre Científico:</strong><br>
+  Danaus plexippus<br><br>
+
+  <strong>Estatus:</strong><br>
+  Especie protegida y migratoria.<br><br>
+
+  <strong>Rol en el Ecosistema:</strong><br>
+  Importante polinizadora de flores silvestres.<br><br>
+
+  <strong>Función Trófica:</strong><br>
+  Herbívora.<br><br>
+
+  <strong>Identificación:</strong><br>
+  Alas anaranjadas con patrones negros y puntos blancos.
+  `;
+
+}
 }
 
 
